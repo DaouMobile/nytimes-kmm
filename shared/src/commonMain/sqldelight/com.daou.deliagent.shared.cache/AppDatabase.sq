@@ -1,0 +1,32 @@
+CREATE TABLE ClipArticle (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    linkUrl TEXT NOT NULL,
+    publishDate TEXT NOT NULL,
+    title TEXT NOT NULL,
+    thumbnailUrl TEXT NOT NULL
+);
+
+CREATE TABLE SearchWord (
+    id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT,
+    keyword TEXT NOT NULL
+);
+
+insertClipArticle:
+INSERT INTO ClipArticle(id, linkUrl, publishDate, title, thumbnailUrl)
+VALUES(?, ?, ?, ?, ?);
+
+insertSearchWord:
+INSERT INTO SearchWord(id, keyword)
+VALUES(?, ?);
+
+selectAllClipArticle:
+SELECT * FROM ClipArticle;
+
+selectRecentSearchWord:
+SELECT * FROM SearchWord
+ORDER BY id DESC
+LIMIT 10;
+
+deleteClipArticle:
+DELETE FROM ClipArticle
+WHERE id = ?;
