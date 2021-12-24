@@ -1,4 +1,4 @@
-###Apply KMM in NewYork Times Search App
+### Apply KMM in NewYork Times Search App
 
 ## API  
 https://api.nytimes.com/svc/search/v2/articlesearch.json
@@ -9,7 +9,8 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json
 Kotlin
 
 ## Arcitecture
-MVVM
+- Kotlin Multi Module
+- Android: MVVM
 
 ## NetWork
 Ktor
