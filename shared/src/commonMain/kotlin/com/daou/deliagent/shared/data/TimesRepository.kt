@@ -17,7 +17,7 @@ class TimesRepository : KoinComponent, TimesRepositoryInterface {
         val result = kotlin.runCatching { api.searchNews(searchText, page) }
         if (result.isFailure) {
             var message = ""
-            result.getOrElse { message = it.message ?: "" }
+            result.getOrElse { throwable -> (throwable.message ?: "").also { message = it } }
             throw BaseException(
                 code = DEFAULT_ERROR_CODE,
                 errorMessage = message
