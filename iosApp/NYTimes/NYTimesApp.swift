@@ -1,17 +1,15 @@
-//
-//  NYTimesApp.swift
-//  NYTimes
-//
-//  Created by Geonu Jeon on 2022/01/04.
-//
-
 import SwiftUI
+import shared
 
 @main
 struct NYTimesApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ArticleList()
         }
+    }
+    
+    init() {
+        KoinKt.doInitKoin()
     }
 }

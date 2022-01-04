@@ -35,7 +35,11 @@ fun commonModule() = module {
     single { TimesApi(get()) }
 }
 
-fun createJson() = Json { isLenient = true; ignoreUnknownKeys = true }
+fun createJson() = Json {
+    isLenient = true
+    ignoreUnknownKeys = true
+    useAlternativeNames = false
+}
 
 fun createHttpClient(json: Json) = HttpClient {
     install(JsonFeature) {
