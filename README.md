@@ -11,7 +11,7 @@ https://api.nytimes.com/svc/search/v2/articlesearch.json
 
 ## Arcitecture
 - Kotlin Multi Module
-- Android: MVVM
+- Android, iOS: MVVM
 
 ## NetWork
 Ktor
